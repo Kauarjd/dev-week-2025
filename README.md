@@ -62,3 +62,8 @@ erDiagram
         String type
     }
 ```
+
+![Image](https://github.com/user-attachments/assets/e1ab2007-a324-45f3-a1dd-8a15d15f9150)
+![Image](https://github.com/user-attachments/assets/81cdbba8-076a-4ad9-81dc-c8d2c03d1641)
+![Image](https://github.com/user-attachments/assets/e779aac1-3a9f-487e-9862-d32fe2c6551a)
+![Image](https://github.com/user-attachments/assets/66a7aa47-0679-4516-8316-750ba21333a4)
