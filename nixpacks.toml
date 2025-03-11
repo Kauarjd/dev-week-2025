@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["jdk17"]
+
+[phases.install]
+cmds = ["mvn clean install"]
+
+[phases.build]
+cmds = ["mvn package"]
+
+[start]
+cmd = "java -jar target/santander-dev-week-2025-0.0.1-SNAPSHOT.jar"
