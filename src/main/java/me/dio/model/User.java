@@ -1,9 +1,7 @@
 package me.dio.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDate;
 
 @Entity
 public class User {
@@ -12,33 +10,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @Column(nullable = false)
     private String name;
 
-    @NotNull
+    @Column(nullable = false, unique = true)
     private String cpf;
 
-    @NotNull
-    private Date birthDate;
+    @Column(nullable = false)
+    private LocalDate birthDate;
 
-    @NotNull
-    private Date registerDate;
-
-    @OneToOne
-    @JoinColumn(name = "profile_id")
-    private Profile profile;
-
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private Autenticacao autenticacao;
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Email> emails;
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Address> addresses;
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<AccessHistory> accessHistories;
+    @Column(nullable = false)
+    private LocalDate registerDate;
 
     // Getters e Setters
 }
